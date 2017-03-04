@@ -1,0 +1,2380 @@
+[ 2017-03-01T22:49:15+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002203s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+
+[ 2017-03-01T22:49:15+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `ot_config` [ RunTime:0.0102s ]
+SQL: SELECT `type`,`name`,`value` FROM `ot_config` WHERE `status` = 1  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040347s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000696s ]
+
+[ 2017-03-01T22:49:15+08:00 ] 127.0.0.1 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002714s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003196s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000718s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000764s ]
+
+[ 2017-03-01T22:49:27+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001953s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+NOTIC: [8] Undefined index: lite D:\C\workpace\www\ot\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0064s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `ot_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_action` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `ot_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0035s ]
+SQL: SELECT `nickname` FROM `ot_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0036s ]
+SQL: INSERT INTO `ot_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','2130706433','member','1','1488379767','root在2017-03-01 22:49登录了后台') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ot_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 D:\C\workpace\www\ot\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\C\workpace\www\ot\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1488293367 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `ot_member` SET `score`=score+10 WHERE ( uid=1 AND status>-1 ) [ RunTime:0.0002s ]
+SQL: UPDATE `ot_member` SET `login`=`login`+1,`last_login_time`='1488379767',`last_login_ip`='2130706433' WHERE `uid` = 1 [ RunTime:0.0001s ]
+
+[ 2017-03-01T22:49:28+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001993s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0068s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0035s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.115786s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008169s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.045924s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.705609s ]
+SQL: select version() as v; [ RunTime:0.0005s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051787s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.579043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.630362s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.630378s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.755988s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008256s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.632322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.640070s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.009698s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.686085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008456s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.632322s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.640278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2017-03-01T22:49:42+08:00 ] 127.0.0.1 /admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002231s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0083s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0335s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_auth_group_access` [ RunTime:0.0070s ]
+SQL: SELECT `extend_id` FROM ot_auth_group_access g INNER JOIN ot_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0060s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ot_category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `ot_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `extend` FROM `ot_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_attribute` [ RunTime:0.0036s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `ot_attribute` WHERE `model_id` = 1  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: groups D:\C\workpace\www\ot\Application\Admin\Controller\ArticleController.class.php 第 231 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000346s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000392s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.389924s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.389976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001003s ]
+
+[ 2017-03-01T22:49:45+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001938s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `ot_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.153912s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.153959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2017-03-01T22:49:46+08:00 ] 127.0.0.1 /admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0091s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_config` [ RunTime:0.0055s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ot_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130772s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2017-03-01T22:49:48+08:00 ] 127.0.0.1 /admin.php?s=/Addons/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001961s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0084s ]
+SQL: SELECT `title`,`name` FROM `ot_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Addons/index%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 43  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 43 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '扩展' AND `pid` = 43 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`author`,`version`,`create_time`,`has_adminlist` FROM `ot_addons` WHERE `name` IN ('Attachment','DevTeam','Editor','EditorForAdmin','SiteStat','SocialComment','SystemInfo')  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0123s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'Attachment' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SocialComment' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'Editor' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'EditorForAdmin' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.157059s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.157110s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2017-03-01T22:49:49+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001955s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0036s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0063s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.110549s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.039406s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.171250s ]
+SQL: select version() as v; [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009649s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.054511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.063838s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.063972s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.183579s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006188s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.068330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.074177s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.010277s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.113800s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006632s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.068330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.074635s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002288s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002440s ]
+
+[ 2017-03-01T22:54:28+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0099s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0126s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0116s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0135s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0123s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.155523s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002800s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002853s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000561s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.079959s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.731854s ]
+SQL: select version() as v; [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008235s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.570795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.578602s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.578724s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.740545s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015500s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.583012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000031s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.598101s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.019448s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.678281s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015971s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.583012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000025s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.598536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002143s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002278s ]
+
+[ 2017-03-01T22:54:38+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002173s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0144s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0034s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.110410s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000476s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.038963s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.170431s ]
+SQL: select version() as v; [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009864s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.054594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.064139s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.064313s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'DevTeam' AND `status` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.184480s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006472s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.069402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.075533s ]
+INFO: Run Addons\DevTeam\DevTeamAddon [ RunTime:0.011276s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.114709s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006913s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.069402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000026s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.075954s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002669s ]
+
+[ 2017-03-01T22:55:15+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002233s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0031s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0086s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.121440s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002390s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002442s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.047885s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.194946s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003558s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.070656s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.073695s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.073716s ]
+
+[ 2017-03-01T22:56:22+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001884s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0111s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0033s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.111495s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002285s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.038613s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.178043s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003388s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.063981s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.067053s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.067088s ]
+
+[ 2017-03-01T22:57:01+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001285s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0103s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0030s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.113678s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.039369s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.186009s ]
+SQL: select version() as v; [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011168s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.066394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.077390s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.077520s ]
+
+[ 2017-03-01T22:57:14+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+SQL: SHOW COLUMNS FROM `ot_hooks` [ RunTime:0.0092s ]
+SQL: SELECT `name`,`addons` FROM `ot_hooks`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0058s ]
+SQL: SELECT `id`,`name` FROM `ot_addons` WHERE `status` = 1 AND `name` IN ('ReturnTop')  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `ot_addons` WHERE `status` = 1 AND `name` IN ('Attachment')  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `ot_addons` WHERE `status` = 1 AND `name` IN ('Attachment','SocialComment')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `ot_addons` WHERE `status` = 1 AND `name` IN ('Attachment')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `ot_addons` WHERE `status` = 1 AND `name` IN ('Editor')  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`name` FROM `ot_addons` WHERE `status` = 1 AND `name` IN ('EditorForAdmin')  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `ot_addons` WHERE `status` = 1 AND `name` IN ('SiteStat','SystemInfo')  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name` FROM `ot_addons` WHERE `status` = 1 AND `name` IN ('Editor')  [ RunTime:0.0002s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.033187s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `ot_config` [ RunTime:0.0059s ]
+SQL: SELECT `type`,`name`,`value` FROM `ot_config` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ AdminIndex ] --START--
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.113029s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002382s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000315s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.037212s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.170745s ]
+SQL: select version() as v; [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009319s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.051777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.060931s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.061057s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.098360s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009751s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.051777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000024s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.061356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001741s ]
+
+[ 2017-03-01T22:59:44+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002252s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0133s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0035s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.118062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002451s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000472s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.042628s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.208119s ]
+SQL: select version() as v; [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003702s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.087199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.090474s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.090500s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.133198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003886s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.087199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.090655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2017-03-01T23:04:03+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001659s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001981s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0105s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0079s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.117297s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002373s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.043738s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.195160s ]
+SQL: select version() as v; [ RunTime:0.0038s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025681s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.071621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.097040s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.097085s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.140888s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025894s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.071621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.097244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2017-03-01T23:05:55+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001157s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0086s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0036s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.119715s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.039642s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.196167s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003143s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.073851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.076703s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.076728s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.116426s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003302s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.073851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.076860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2017-03-01T23:11:02+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001759s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0088s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0035s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.118117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000418s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.041870s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.698148s ]
+SQL: select version() as v; [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010041s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.573870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.583710s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.583904s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.625911s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010723s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.573870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000035s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.584358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002239s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002395s ]
+
+[ 2017-03-01T23:11:45+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002267s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0091s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0036s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.130474s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000501s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.051780s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.191310s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003717s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.057826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.061085s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.061107s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.112960s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003873s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.057826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.061240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001073s ]
+
+[ 2017-03-01T23:12:16+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002557s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002979s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0095s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0042s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0063s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.126842s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.046087s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.183399s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021537s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.053682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.074779s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.074779s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.120943s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021698s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.053682s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.074941s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2017-03-01T23:13:33+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001349s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0082s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0039s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.110120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002233s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.037365s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.188244s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014770s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.075803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.090230s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.090252s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.127677s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014934s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.075803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.090391s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2017-03-01T23:13:54+08:00 ] 127.0.0.1 /admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002332s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0095s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_auth_group_access` [ RunTime:0.0061s ]
+SQL: SELECT `extend_id` FROM ot_auth_group_access g INNER JOIN ot_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0056s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ot_category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `ot_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `extend` FROM `ot_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_attribute` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `ot_attribute` WHERE `model_id` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: groups D:\C\workpace\www\ot\Application\Admin\Controller\ArticleController.class.php 第 231 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000370s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000411s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.365511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.365557s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001069s ]
+
+[ 2017-03-01T23:14:01+08:00 ] 127.0.0.1 /admin.php?s=/article/recycle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002235s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0112s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Article/recycle%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_auth_group_access` [ RunTime:0.0087s ]
+SQL: SELECT `extend_id` FROM ot_auth_group_access g INNER JOIN ot_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0063s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ot_category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` WHERE `status` = -1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`uid`,`name`,`title`,`category_id`,`group_id`,`description`,`root`,`pid`,`model_id`,`type`,`position`,`link_id`,`cover_id`,`display`,`deadline`,`attach`,`view`,`comment`,`extend`,`level`,`create_time`,`update_time`,`status` FROM `ot_document` WHERE `status` = -1 ORDER BY update_time desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000256s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000298s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.238454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.238504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000996s ]
+
+[ 2017-03-01T23:14:03+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0092s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `ot_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,10   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.154678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.154725s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001315s ]
+
+[ 2017-03-01T23:14:08+08:00 ] 127.0.0.1 /admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001963s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000693s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_auth_group_access` [ RunTime:0.0063s ]
+SQL: SELECT `extend_id` FROM ot_auth_group_access g INNER JOIN ot_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0055s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ot_category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `ot_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `extend` FROM `ot_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_attribute` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `ot_attribute` WHERE `model_id` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: groups D:\C\workpace\www\ot\Application\Admin\Controller\ArticleController.class.php 第 231 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000366s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000409s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.374389s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.374446s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000760s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000995s ]
+
+[ 2017-03-01T23:14:09+08:00 ] 127.0.0.1 /admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001957s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0095s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_config` [ RunTime:0.0053s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ot_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.129612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2017-03-01T23:14:13+08:00 ] 127.0.0.1 /admin.php?s=/Addons/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0100s ]
+SQL: SELECT `title`,`name` FROM `ot_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Addons/index%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 43  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 43 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '扩展' AND `pid` = 43 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`author`,`version`,`create_time`,`has_adminlist` FROM `ot_addons` WHERE `name` IN ('Attachment','Editor','EditorForAdmin','SiteStat','SocialComment','SystemInfo')  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0034s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'Attachment' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SocialComment' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'Editor' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'EditorForAdmin' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.145250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.145291s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000649s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000685s ]
+
+[ 2017-03-01T23:14:50+08:00 ] 127.0.0.1 /admin.php?s=/Addons/hooks.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002217s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0086s ]
+SQL: SELECT `title`,`name` FROM `ot_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0033s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Addons/hooks%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 43  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 43 AND `hide` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '扩展' AND `pid` = 43 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_hooks` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_hooks` WHERE `status` >= 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`description`,`type`,`update_time`,`addons`,`status` FROM `ot_hooks` WHERE `status` >= 0 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.138177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.138224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001088s ]
+
+[ 2017-03-01T23:14:53+08:00 ] 127.0.0.1 /admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0109s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_config` [ RunTime:0.0062s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ot_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130494s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000708s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001486s ]
+
+[ 2017-03-01T23:14:53+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001940s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0118s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `ot_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.153781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.153830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000898s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000955s ]
+
+[ 2017-03-01T23:14:54+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001952s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0084s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0046s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0255s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.131842s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002280s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002321s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.059529s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.185466s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003051s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.051108s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.053690s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.053715s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.113301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003215s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.051108s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.053850s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001148s ]
+
+[ 2017-03-01T23:15:02+08:00 ] 127.0.0.1 /admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002215s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000786s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0092s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_auth_group_access` [ RunTime:0.0059s ]
+SQL: SELECT `extend_id` FROM ot_auth_group_access g INNER JOIN ot_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0058s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ot_category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `ot_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `extend` FROM `ot_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_attribute` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `ot_attribute` WHERE `model_id` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: groups D:\C\workpace\www\ot\Application\Admin\Controller\ArticleController.class.php 第 231 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000422s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000466s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.365433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.365483s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001157s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001246s ]
+
+[ 2017-03-01T23:15:03+08:00 ] 127.0.0.1 /admin.php?s=/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0087s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%User/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 16  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 16 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '用户管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '行为管理' AND `pid` = 16 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `ot_member` WHERE `status` >= 0 AND `nickname` LIKE '%%' ORDER BY uid desc LIMIT 0,10   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.149017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.149065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000823s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000871s ]
+
+[ 2017-03-01T23:15:05+08:00 ] 127.0.0.1 /admin.php?s=/Config/group.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002194s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0108s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Config/group%' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 68 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 68  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 68 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '系统设置' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '数据备份' AND `pid` = 68 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_config` [ RunTime:0.0061s ]
+SQL: SELECT `id`,`name`,`title`,`extra`,`value`,`remark`,`type` FROM `ot_config` WHERE `status` = 1 AND `group` = 1 ORDER BY sort  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130341s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130389s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001608s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001665s ]
+
+[ 2017-03-01T23:15:05+08:00 ] 127.0.0.1 /admin.php?s=/Addons/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001953s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0093s ]
+SQL: SELECT `title`,`name` FROM `ot_addons` WHERE ( status=1 AND has_adminlist=1 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0033s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Addons/index%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 43  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 43 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '扩展' AND `pid` = 43 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`author`,`version`,`create_time`,`has_adminlist` FROM `ot_addons` WHERE `name` IN ('Attachment','Editor','EditorForAdmin','SiteStat','SocialComment','SystemInfo')  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000198s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0031s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'Attachment' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SocialComment' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'Editor' AND `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'EditorForAdmin' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.142895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.142932s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2017-03-01T23:15:07+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001953s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0089s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0033s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.113346s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.039979s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.190880s ]
+SQL: select version() as v; [ RunTime:0.0044s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013357s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.072045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000033s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.085229s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.085399s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.125480s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013901s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.072045s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.085755s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004231s ]
+
+[ 2017-03-01T23:15:50+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001309s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0138s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0035s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.115714s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002663s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.041975s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.211128s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015960s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.092613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.108259s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.108293s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.150340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016152s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.092613s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.108441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000604s ]
+
+[ 2017-03-01T23:16:32+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002199s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0094s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0091s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.120748s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.046034s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.188486s ]
+NOTIC: [2] date() expects at least 1 parameter, 0 given D:\C\workpace\www\ot\Runtime\Cache\Admin\a2687d4c008de26902ac38bda01195da.php 第 17 行.
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015984s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.064893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.080442s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.080470s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.126573s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016165s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.064893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.080620s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2017-03-01T23:16:46+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001279s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0098s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0033s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.109829s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.038521s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.161208s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015956s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.048688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.064372s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.064397s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.102976s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016118s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.048688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000009s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.064533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2017-03-01T23:17:07+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0080s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0037s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.112784s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002478s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000403s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.038400s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.171683s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015682s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.056350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.071674s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.071700s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.110158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015848s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.056350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.071838s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2017-03-01T23:18:23+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002249s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0102s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0036s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.119030s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.041676s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.198090s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036958s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.073769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.110332s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.110358s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.152095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037124s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.073769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.110493s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000938s ]
+
+[ 2017-03-01T23:19:05+08:00 ] 127.0.0.1 /admin.php?s=/Article/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002276s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0101s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_auth_group_access` [ RunTime:0.0060s ]
+SQL: SELECT `extend_id` FROM ot_auth_group_access g INNER JOIN ot_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0055s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ot_category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `ot_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0067s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `pid` = 0 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `extend` FROM `ot_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_attribute` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `ot_attribute` WHERE `model_id` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: groups D:\C\workpace\www\ot\Application\Admin\Controller\ArticleController.class.php 第 231 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000436s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000478s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.360384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.360435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2017-03-01T23:19:10+08:00 ] 127.0.0.1 /admin.php?s=/Article/index/cate_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001961s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0092s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_auth_group_access` [ RunTime:0.0050s ]
+SQL: SELECT `extend_id` FROM ot_auth_group_access g INNER JOIN ot_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0063s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ot_category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`title`,`pid` FROM `ot_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `ot_category` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `ot_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `category_id` = 2 AND `pid` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `category_id` = 2 AND `pid` = 0 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `extend` FROM `ot_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_attribute` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `ot_attribute` WHERE `model_id` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000321s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000361s ]
+SQL: SELECT `id`,`name`,`title`,`extend`,`relation`,`need_pk`,`field_sort`,`field_group`,`attribute_list`,`attribute_alias`,`template_list`,`template_add`,`template_edit`,`list_grid`,`list_row`,`search_key`,`search_list`,`create_time`,`update_time`,`status`,`engine_type` FROM `ot_model` WHERE `status` = 1 AND `extend` = 1  [ RunTime:0.0004s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.366569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.366616s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2017-03-01T23:19:26+08:00 ] 127.0.0.1 /admin.php?s=/Article/setstatus/status/-1/ids/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001985s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0092s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Article/setstatus%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0055s ]
+SQL: UPDATE `ot_document` SET `status`='-1' WHERE `id` IN ('1') [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015972s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-03-01T23:19:28+08:00 ] 127.0.0.1 /admin.php?s=/Article/index/cate_id/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003815s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0085s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Article/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `ot_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `ot_menu` WHERE `pid` = 2 AND `hide` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `ot_menu` WHERE `group` = '内容' AND `pid` = 2 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_auth_group_access` [ RunTime:0.0063s ]
+SQL: SELECT `extend_id` FROM ot_auth_group_access g INNER JOIN ot_auth_extend c on g.group_id=c.group_id  WHERE ( g.uid='1' and c.type='1' and !isnull(extend_id) )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0065s ]
+SQL: SELECT `id`,`title`,`pid`,`allow_publish` FROM `ot_category` WHERE `status` = 1 ORDER BY pid,sort  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`pid` FROM `ot_category` WHERE `status` = 1 ORDER BY sort  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `ot_model` WHERE `name` = 'document' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `category_id` = 2 AND `pid` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`type`,`update_time`,`status`,`view`,`category_id`,`model_id`,`pid` FROM ot_document DOCUMENT WHERE `status` IN ('0','1','2') AND `category_id` = 2 AND `pid` = 0 ORDER BY level DESC,DOCUMENT.id DESC LIMIT 0,10   [ RunTime:0.0002s ]
+SQL: SELECT `extend` FROM `ot_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_attribute` [ RunTime:0.0039s ]
+SQL: SELECT `id`,`name`,`type`,`extra` FROM `ot_attribute` WHERE `model_id` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000308s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.366777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.366827s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2017-03-01T23:19:40+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001970s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: SHOW COLUMNS FROM `ot_menu` [ RunTime:0.0097s ]
+SQL: SELECT `id`,`title`,`url` FROM `ot_menu` WHERE `pid` = 0 AND `hide` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `ot_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: [ AdminIndex ] --START--
+SQL: SHOW COLUMNS FROM `ot_addons` [ RunTime:0.0033s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SiteStat' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_document` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_document` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_category` [ RunTime:0.0063s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_category` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `ot_model` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_model` LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.115459s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: Run Addons\SiteStat\SiteStatAddon [ RunTime:0.040830s ]
+SQL: SELECT `config` FROM `ot_addons` WHERE `name` = 'SystemInfo' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.185730s ]
+SQL: select version() as v; [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003085s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.067652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.070273s ]
+INFO: Run Addons\SystemInfo\SystemInfoAddon [ RunTime:0.070294s ]
+INFO: [ AdminIndex ] --END-- [ RunTime:0.111185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003242s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.067652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000008s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.070428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000744s ]
+
+[ 2017-03-01T23:19:44+08:00 ] 127.0.0.1 /admin.php?s=/Public/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001958s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0092s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-03-01T23:19:45+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003188s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045167s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000590s ]
+
+[ 2017-03-01T23:19:46+08:00 ] 127.0.0.1 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002768s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001940s ]
+
+[ 2017-03-01T23:24:48+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001814s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002175s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+
+[ 2017-03-01T23:24:48+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001775s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2017-03-01T23:24:48+08:00 ] 127.0.0.1 /admin.php?s=/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.003772s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000862s ]
+
+[ 2017-03-01T23:24:56+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002204s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+NOTIC: [8] Undefined index: lite D:\C\workpace\www\ot\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `ot_member` [ RunTime:0.0060s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `ot_member` WHERE `uid` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `ot_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `ot_action_log` [ RunTime:0.0033s ]
+SQL: INSERT INTO `ot_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','2','2130706433','member','2','1488381896','xwh在2017-03-01 23:24登录了后台') [ RunTime:0.0002s ]
+SQL: SELECT * FROM `ot_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 D:\C\workpace\www\ot\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\C\workpace\www\ot\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ot_action_log` WHERE `action_id` = 1 AND `user_id` = 2 AND `create_time` > 1488295496 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `ot_member` SET `login`=`login`+1,`last_login_time`='1488381896',`last_login_ip`='2130706433' WHERE `uid` = 2 [ RunTime:0.0001s ]
+
+[ 2017-03-01T23:24:56+08:00 ] 127.0.0.1 /admin.php?s=/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.002189s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `ot_auth_group_access` [ RunTime:0.0067s ]
+SQL: SELECT `rules` FROM ot_auth_group_access a INNER JOIN ot_auth_group g on a.group_id=g.id  WHERE ( a.uid='2' and g.status='1' )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017457s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000440s ]
+
+[ 2017-03-01T23:24:59+08:00 ] 127.0.0.1 /admin.php?s=/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001900s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+
