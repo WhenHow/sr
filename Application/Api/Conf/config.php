@@ -8,5 +8,6 @@
 return [
     'API_MAP' => [
         'APP_LOGIN' => 'Api\Event\AppEvent@login',
+        'ADD_SPIDER_RECORD' => 'Api\Event\AppEvent@addOneSpiderRecord'
     ]
 ];

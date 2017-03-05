@@ -1016,3 +1016,23 @@ function check_category_model($info){
     $array  =   explode(',', $info['pid'] ? $cate['model_sub'] : $cate['model']);
     return in_array($info['model_id'], $array);
 }
+
+/**
+ * 构建返回失败的json数组
+ * @param $code
+ * @param $error_msg
+ * @return array
+ */
+function makeFailedResponse($code, $error_msg)
+{
+    return json_encode(array('status' => false, 'code' => $code, 'msg' => $error_msg));
+}
+
+/**
+ * 构建返回成功的json数组
+ * @return string
+ */
+function makeSuccessResponse()
+{
+    return json_encode(array('status' => true, 'code' => "10000", 'msg' => ''));
+}

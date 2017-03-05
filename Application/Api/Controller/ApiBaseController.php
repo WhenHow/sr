@@ -16,8 +16,20 @@ class ApiBaseController extends Controller
         parent::__construct();
     }
 
-    protected function ApiMethodDispatcher($function_name, ){
+    public function entry(){
+        
+    }
+
+    private function ApiMethodDispatcher($function_name, $param){
 
     }
+
+    private function parseApiParam($param){
+
+    }
+
+
+
+
 
 }
