@@ -8,7 +8,7 @@
 return [
     'API_MAP' => [
         'APP_LOGIN' => 'Api\Event\AppEvent@login',
-        'ADD_SPIDER_RECORD' => 'Api\Event\AppEvents@addOneSpiderRecord'
+        'ADD_SPIDER_RECORD' => 'Api\Event\AppEvent@addOneSpiderRecord'
     ],
 
     'API_RC4_KEY' => 'THIS IS SPIDER',
