@@ -1030,9 +1030,10 @@ function makeFailedResponse($code, $error_msg)
 
 /**
  * 构建返回成功的json数组
+ * @param null $data
  * @return string
  */
-function makeSuccessResponse()
+function makeSuccessResponse($data = null)
 {
-    return json_encode(array('status' => true, 'code' => "10000", 'msg' => ''));
+    return json_encode(array('status' => true, 'code' => "10000", 'data' => $data));
 }

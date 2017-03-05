@@ -87,3 +87,29 @@ function rc4($pwd, $data)//$pwd密钥　$data需加密字符串
 
     return $cipher;
 }
+
+/**
+ * 获得api的错误代码
+ * @param string $error_code_index
+ * @return mixed
+ */
+function getErrorApiCode($error_code_index = 'UNKNOWN_ERROR'){
+    $error_map = C('ERROR_API_CODE_MAP');
+    $error_code = $error_map[$error_code_index];
+    if(!$error_code){
+        return $error_map['UNKNOWN_ERROR'];
+    }
+    return $error_code;
+}
+
+/**
+ * 构建返回失败的json数组
+ * @param $code_index
+ * @param $error_msg
+ * @return array
+ */
+function makeFailedApiResponse($code_index, $error_msg = '')
+{
+    $code = getErrorApiCode($code_index);
+    return json_encode(array('status' => false, 'code' => $code, 'msg' => $error_msg));
+}

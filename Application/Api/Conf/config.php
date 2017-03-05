@@ -8,6 +8,13 @@
 return [
     'API_MAP' => [
         'APP_LOGIN' => 'Api\Event\AppEvent@login',
-        'ADD_SPIDER_RECORD' => 'Api\Event\AppEvent@addOneSpiderRecord'
-    ]
+        'ADD_SPIDER_RECORD' => 'Api\Event\AppEvents@addOneSpiderRecord'
+    ],
+
+    'API_RC4_KEY' => 'THIS IS SPIDER',
+
+    'ERROR_API_CODE_MAP' => [
+        'UNKNOWN_ERROR' => '000001',
+        'BAD_PARAM' => '000002',
+    ],
 ];

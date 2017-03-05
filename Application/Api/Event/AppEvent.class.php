@@ -10,5 +10,7 @@ namespace Api\Event;
 
 class AppEvent
 {
-
+    public function addOneSpiderRecord($param){
+        return makeSuccessResponse($param);
+    }
 }
