@@ -26,6 +26,6 @@ class HomePageController extends HomeController
      * app的管理列表
      */
     public function appManage(){
-
+        $this->display();
     }
 }
