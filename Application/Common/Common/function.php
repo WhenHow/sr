@@ -1018,22 +1018,50 @@ function check_category_model($info){
 }
 
 /**
- * 构建返回失败的json数组
+ * 构建返回失败的数组
+
  * @param $code
  * @param $error_msg
- * @return array
+ * @param bool $is_json
+ * @return array|string
  */
-function makeFailedResponse($code, $error_msg)
+function makeFailedResponse($code, $error_msg,$is_json = true)
 {
-    return json_encode(array('status' => false, 'code' => $code, 'msg' => $error_msg));
+    $data = array('status' => false, 'code' => $code, 'msg' => $error_msg);
+    if($is_json){
+        $data = json_encode($data);
+    }
+    return $data;
 }
 
 /**
- * 构建返回成功的json数组
+ * 构建返回成功的数组
  * @param null $data
- * @return string
+ * @param bool $is_json
+ * @return array|null|string
  */
-function makeSuccessResponse($data = null)
+function makeSuccessResponse($data = null,$is_json = true)
 {
-    return json_encode(array('status' => true, 'code' => "10000", 'data' => $data));
+    $data = array('status' => true, 'code' => "10000", 'data' => $data);
+    if($is_json){
+        $data = json_encode($data);
+    }
+    return $data;
+}
+
+function getCurrentUser(){
+    return session('user_auth');
+}
+
+/**
+ * 获得错误码的含义
+ * @param $code
+ * @return mixed|string
+ */
+function getCodeMsg($code){
+    $msg = L($code);
+    if(!$msg){
+        $msg = "未知错误";
+    }
+    return $msg;
 }

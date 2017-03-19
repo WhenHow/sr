@@ -45,4 +45,8 @@ return array(
 
     /* 文档模型配置 (文档模型核心配置，请勿更改) */
     'DOCUMENT_MODEL_TYPE' => array(2 => '主题', 1 => '目录', 3 => '段落'),
+    'LANG_SWITCH_ON' => true,   // 开启语言包功能
+    'DEFAULT_LANG' => 'zh-cn', // 默认语言
+    'VAR_LANGUAGE' => 'lang', // 默认语言切换变量
+    'LANG_LIST' => 'zh-cn', // 允许切换的语言列表 用逗号分隔
 );
