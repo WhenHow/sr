@@ -26,6 +26,10 @@ class HomePageController extends HomeController
      * app的管理列表
      */
     public function appManage(){
+        $page = intval(I('p'));
+        $limit = intval(C('PAGE_LIMIT'));
+        $my_apps = (new AppsLogic())->fetchMyAppList($page,$limit);
+        $this->assign($my_apps);
         $this->display();
     }
 }
