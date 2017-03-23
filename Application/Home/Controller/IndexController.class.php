@@ -16,11 +16,13 @@ use OT\DataDictionary;
  */
 class IndexController extends HomeController {
 
+    public function __construct(){
+        $this->checkLoginActionMap = ['index' => 0];
+        parent::__construct();
+    }
+
 	//系统首页
     public function index(){
-        if(!is_login()){
-            $this->redirect('Home/User/login');
-        }
 
         $category = D('Category')->getTree();
         $lists    = D('Document')->lists(null);

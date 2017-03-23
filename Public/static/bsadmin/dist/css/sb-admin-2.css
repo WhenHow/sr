@@ -437,3 +437,34 @@ table.dataTable thead .sorting:after {
     border-left-width: 0;
   }
 }
+.page {
+  margin: 10px 0;
+}
+.page a, .page span {
+  color: #686868;
+  border: 1px solid #CCCCCC;
+}
+.page .current {
+  border-top: 3px solid #4BBD00;
+  height: 30px;
+  line-height: 26px;
+}
+.page a, .page span {
+  float: left;
+  margin-left: -1px;
+  padding: 0 14px;
+  height: 30px;
+  line-height: 30px;
+  color: #000;
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+  /* background-color: #4bbd00; */
+}
+
+.page .next, .page .prev {
+  font-family: "宋体";
+  font-weight: bold;
+}
+.page .rows {
+  border-right: 1px solid #CCCCCC;
+}

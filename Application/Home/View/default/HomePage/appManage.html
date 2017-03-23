@@ -36,6 +36,9 @@
                                             aria-controls="dataTables-example"></label></div>
                                 </div>
                             </div>-->
+                            <p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加</button>
+                            </p>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <table width="100%"
@@ -61,6 +64,11 @@
                                             </th>
                                             <th tabindex="0" aria-controls="dataTables-example"
                                                 rowspan="1" colspan="1"
+                                                aria-label="Platform(s): activate to sort column ascending"
+                                                style="width: 188px;">状态
+                                            </th>
+                                            <th tabindex="0" aria-controls="dataTables-example"
+                                                rowspan="1" colspan="1"
                                                 aria-label="Engine version: activate to sort column ascending"
                                                 style="width: 147px;">操作
                                             </th>
@@ -72,77 +80,31 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr class="gradeA odd" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Firefox 1.0</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td class="center">1.7</td>
-                                        </tr>
-                                        <tr class="gradeA even" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Firefox 1.5</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td class="center">1.8</td>
-                                        </tr>
-                                        <tr class="gradeA odd" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Firefox 2.0</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td class="center">1.8</td>
-                                        </tr>
-                                        <tr class="gradeA even" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Firefox 3.0</td>
-                                            <td>Win 2k+ / OSX.3+</td>
-                                            <td class="center">1.9</td>
-                                        </tr>
-                                        <tr class="gradeA odd" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Camino 1.0</td>
-                                            <td>OSX.2+</td>
-                                            <td class="center">1.8</td>
-                                        </tr>
-                                        <tr class="gradeA even" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Camino 1.5</td>
-                                            <td>OSX.3+</td>
-                                            <td class="center">1.8</td>
-                                        </tr>
-                                        <tr class="gradeA odd" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Netscape 7.2</td>
-                                            <td>Win 95+ / Mac OS 8.6-9.2</td>
-                                            <td class="center">1.7</td>
-                                        </tr>
-                                        <tr class="gradeA even" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Netscape Browser 8</td>
-                                            <td>Win 98SE+</td>
-                                            <td class="center">1.7</td>
-                                        </tr>
-                                        <tr class="gradeA odd" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Netscape Navigator 9</td>
-                                            <td>Win 98+ / OSX.2+</td>
-                                            <td class="center">1.8</td>
-                                        </tr>
-                                        <tr class="gradeA even" role="row">
-                                            <td class="sorting_1">Gecko</td>
-                                            <td>Mozilla 1.0</td>
-                                            <td>Win 95+ / OSX.1+</td>
-                                            <td class="center">1</td>
-                                        </tr>
+                                        <php>$app_list_count = 0;</php>
+                                        <volist name='data' id="vo">
+                                            <php>$app_list_count++</php>
+                                            <tr class="gradeA <if condition='($app_list_count % 2) eq 1 '>odd<else/>even</if>" role="row">
+                                                <td class="sorting_1">{$vo.app_name}</td>
+                                                <td>{$vo.app_id}</td>
+                                                <td>{$vo.app_key}</td>
+                                                <td><if condition="$vo['app_status'] eq 1 ">正常<else/>审核中</if></td>
+                                                <td class="center">
+                                                    <button type="button" class="btn btn-primary btn-sm">编辑</button>
+                                                    <button type="button" class="btn btn-primary btn-sm btn-danger">删除</button>
+                                                </td>
+                                            </tr>
+                                        </volist>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6">
+                                <!--<div class="col-sm-6">
                                     <div class="dataTables_info" id="dataTables-example_info" role="status"
                                          aria-live="polite">Showing 1 to 10 of 57 entries
                                     </div>
-                                </div>
-                                <div class="col-sm-6">
+                                </div>-->
+                                <!--<div class="col-sm-6">
                                     <div class="dataTables_paginate paging_simple_numbers"
                                          id="dataTables-example_paginate">
                                         <ul class="pagination">
@@ -165,6 +127,11 @@
                                                 tabindex="0" id="dataTables-example_next"><a href="#">Next</a></li>
                                         </ul>
                                     </div>
+                                </div>-->
+                                <div class="col-sm-6">
+                                        <div class="page">
+                                        {$page_obj}
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -182,4 +149,26 @@
             <!-- /.col-lg-12 -->
         </div>
     </div>
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
 </block>
+

@@ -21,6 +21,8 @@ class HomeController extends Controller {
 		$this->redirect('Index/index');
 	}
 
+	protected $checkLoginActionMap = [];
+
 
     protected function _initialize(){
         /* 读取站点配置 */
@@ -30,12 +32,35 @@ class HomeController extends Controller {
         if(!C('WEB_SITE_CLOSE')){
             $this->error('站点已经关闭，请稍后访问~');
         }
+        $this->checkNeedLoginAction(ACTION_NAME);
     }
 
 	/* 用户登录检测 */
-	protected function login(){
+	protected function login($ajax_return = false){
 		/* 用户登录检测 */
-		is_login() || $this->error('您还没有登录，请先登录！', U('User/login'));
+		if($ajax_return){
+            is_login() || $this->ajaxReturn(makeFailedResponse('00004',L('00004'),false));
+
+        }else{
+            is_login() || $this->error('您还没有登录，请先登录！', U('User/login'));
+
+        }
 	}
+
+	protected function checkNeedLoginAction($action_name){
+        $action_name = strtolower($action_name);
+        if(!$action_name){
+            return;
+        }
+
+        if(key_exists($action_name, $this->checkLoginActionMap)){
+            $is_ajax = $this->checkLoginActionMap[$action_name];
+            if($is_ajax == 1){
+                $this->login(true);
+            }else{
+                $this->login();
+            }
+        }
+    }
 
 }
