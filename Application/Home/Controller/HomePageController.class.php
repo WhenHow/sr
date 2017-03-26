@@ -29,7 +29,7 @@ class HomePageController extends HomeController
      */
     public function add()
     {
-        $data['app_name'] = I('name');
+        $data['app_name'] = I('app_name');
         $add_ret = (new AppsLogic())->addOne($data, true);
         $this->ajaxReturn($add_ret);
     }

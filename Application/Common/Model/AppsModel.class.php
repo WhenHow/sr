@@ -50,7 +50,12 @@ class AppsModel extends Model
             return makeFailedResponse('00003', getCodeMsg('00003'), false);
         }
 
-        $this->add($insert_data);
+        $add_ret = $this->add($insert_data);
+        if($add_ret){
+            $insert_data['id'] = intval($add_ret);
+            return makeSuccessResponse($insert_data,false);
+        }
+        return makeFailedResponse('00006',L('00006'),false);
     }
 
     protected function trimRequire($content)
