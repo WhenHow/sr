@@ -45,4 +45,12 @@ class HomePageController extends HomeController
         $this->assign($my_apps);
         $this->display();
     }
+
+    public function getMySpiderRec(){
+        $app_id = I('app_id');
+        $page = intval(I('p'));
+        $limit = intval(C('LIST_ROWS'));
+        $spider_agent_list = getAllSpiderList();
+        return $spider_agent_list;
+    }
 }

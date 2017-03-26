@@ -1065,3 +1065,77 @@ function getCodeMsg($code){
     }
     return $msg;
 }
+
+/**
+ * 获得蜘蛛的agent列表
+ * @return mixed
+ */
+function getAllSpiderList()
+{
+    $list = S('spider_list');
+    if ($list) {
+        return $list;
+    }
+    $list = M('spiders')->select();
+    $ret = [];
+    foreach ($list as $val) {
+        $val['spider_agents'] = explode(';', $val['spider_agents']);
+        $id = $val['id'];
+        $ret[$id] = $val;
+    }
+    S('spider_list', $ret);
+    return $ret;
+}
+
+/**
+ * 根据url获得对应spider agent的id
+ * @param $url
+ * @return int
+ */
+function getAgentIdBySpiderUrl($url)
+{
+    $url = strtolower($url);
+    $agent_list = getAllSpiderList();
+    if (!$agent_list) {
+        return 0;
+    }
+    foreach ($agent_list as $val) {
+        $agent_id = $val['id'];
+        foreach ($val['spider_agents'] as $sub_val) {
+            if (strpos($url, $sub_val) !== false) {
+                return $agent_id;
+            }
+        }
+    }
+    return 0;
+}
+
+/**
+ * 在数据列表中搜索
+ * @access public
+ * @param array $list 数据列表
+ * @param mixed $condition 查询条件
+ * 支持 array('name'=>$value) 或者 name=$value
+ * @return array
+ */
+function list_search($list,$condition) {
+    if(is_string($condition))
+        parse_str($condition,$condition);
+    // 返回的结果集合
+    $resultSet = array();
+    foreach ($list as $key=>$data){
+        $find   =   false;
+        foreach ($condition as $field=>$value){
+            if(isset($data[$field])) {
+                if(0 === strpos($value,'/')) {
+                    $find   =   preg_match($value,$data[$field]);
+                }elseif($data[$field]==$value){
+                    $find = true;
+                }
+            }
+        }
+        if($find)
+            $resultSet[]     =   &$list[$key];
+    }
+    return $resultSet;
+}
