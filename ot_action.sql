@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2017-03-05 19:43:48
+Date: 2017-05-15 01:29:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -65,7 +65,7 @@ CREATE TABLE `ot_action_log` (
   KEY `action_ip_ix` (`action_ip`),
   KEY `action_id_ix` (`action_id`),
   KEY `user_id_ix` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='行为日志表';
 
 -- ----------------------------
 -- Records of ot_action_log
@@ -78,6 +78,21 @@ INSERT INTO `ot_action_log` VALUES ('5', '6', '1', '2130706433', 'config', '38',
 INSERT INTO `ot_action_log` VALUES ('6', '1', '2', '2130706433', 'member', '2', 'xwh在2017-03-05 17:37登录了后台', '1', '1488706678');
 INSERT INTO `ot_action_log` VALUES ('7', '1', '2', '2130706433', 'member', '2', 'xwh在2017-03-05 17:50登录了后台', '1', '1488707419');
 INSERT INTO `ot_action_log` VALUES ('8', '6', '1', '2130706433', 'config', '39', '操作url：/admin.php?s=/Config/edit.html', '1', '1488709862');
+INSERT INTO `ot_action_log` VALUES ('9', '1', '2', '2130706433', 'member', '2', 'xwh在2017-03-19 00:05登录了后台', '1', '1489853104');
+INSERT INTO `ot_action_log` VALUES ('10', '1', '1', '2130706433', 'member', '1', 'root在2017-03-19 15:42登录了后台', '1', '1489909367');
+INSERT INTO `ot_action_log` VALUES ('11', '1', '2', '2130706433', 'member', '2', 'xwh在2017-03-19 16:21登录了后台', '1', '1489911699');
+INSERT INTO `ot_action_log` VALUES ('12', '1', '1', '2130706433', 'member', '1', 'root在2017-03-19 21:07登录了后台', '1', '1489928820');
+INSERT INTO `ot_action_log` VALUES ('13', '1', '2', '2130706433', 'member', '2', 'xwh在2017-03-23 23:24登录了后台', '1', '1490282677');
+INSERT INTO `ot_action_log` VALUES ('14', '1', '2', '2130706433', 'member', '2', 'xwh在2017-03-23 23:42登录了后台', '1', '1490283765');
+INSERT INTO `ot_action_log` VALUES ('15', '1', '1', '2130706433', 'member', '1', 'root在2017-03-23 23:43登录了后台', '1', '1490283824');
+INSERT INTO `ot_action_log` VALUES ('16', '6', '1', '2130706433', 'config', '38', '操作url：/admin.php?s=/Config/edit.html', '1', '1490285356');
+INSERT INTO `ot_action_log` VALUES ('17', '1', '2', '2130706433', 'member', '2', 'xwh在2017-03-26 14:08登录了后台', '1', '1490508490');
+INSERT INTO `ot_action_log` VALUES ('18', '1', '1', '2130706433', 'member', '1', 'root在2017-03-27 01:11登录了后台', '1', '1490548283');
+INSERT INTO `ot_action_log` VALUES ('19', '1', '2', '2130706433', 'member', '2', 'xwh在2017-03-27 01:13登录了后台', '1', '1490548416');
+INSERT INTO `ot_action_log` VALUES ('20', '1', '2', '2130706433', 'member', '2', 'xwh在2017-03-27 01:31登录了后台', '1', '1490549488');
+INSERT INTO `ot_action_log` VALUES ('21', '1', '2', '2130706433', 'member', '2', 'xwh在2017-04-02 11:35登录了后台', '1', '1491104115');
+INSERT INTO `ot_action_log` VALUES ('22', '1', '2', '2130706433', 'member', '2', 'xwh在2017-04-16 22:31登录了后台', '1', '1492353096');
+INSERT INTO `ot_action_log` VALUES ('23', '1', '2', '2130706433', 'member', '2', 'xwh在2017-05-14 21:12登录了后台', '1', '1494767546');
 
 -- ----------------------------
 -- Table structure for ot_addons
@@ -119,12 +134,25 @@ CREATE TABLE `ot_apps` (
   `app_id` varchar(50) DEFAULT NULL COMMENT 'app的id',
   `app_key` varchar(50) DEFAULT NULL COMMENT 'app的密钥',
   `app_status` tinyint(1) DEFAULT NULL COMMENT 'app状态 1：正常 0：审核中 -1：删除',
+  `add_time` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ot_apps
 -- ----------------------------
+INSERT INTO `ot_apps` VALUES ('1', '123', '2', '45f1b95c1b3003e170362330e29c80c9c2', '68df760cf5fabe6e97b4c37377b5d3af', '1', '1489853803');
+INSERT INTO `ot_apps` VALUES ('2', '1234', '2', '33155a53a45d9a230f1a67aa561b6c6328', '80ed0a2171a5568c23ebf1a2f073a326', '1', '1489945026');
+INSERT INTO `ot_apps` VALUES ('3', '测试一', '2', '856822545b7bbf2dbe683caa079049e149', '97094b4b367501cf0d69393aaa94b96f', '1', '1490545242');
+INSERT INTO `ot_apps` VALUES ('4', 'vroom', '2', '924e99e691aff4db72ce98e6118a0d28cc', '0fd705dbd3b57248cd921d454f89a8c7', '1', '1490545261');
+INSERT INTO `ot_apps` VALUES ('5', '测试2', '2', '96dcde893e624ec40c194aea0f129f207f', '64f516bdd019d939ec7ba7b98ca5aaea', '1', '1490545286');
+INSERT INTO `ot_apps` VALUES ('6', '8888', '2', '49ba12a4b562d0d8cc0a9fc8e472c12744', 'd97a4e84cba928ba262a39fac95f54c6', '1', '1490545425');
+INSERT INTO `ot_apps` VALUES ('7', '88882', '2', '867410669e0a008499c87a8b58892a62a1', '72443fbb5520633f5265d804e8c974d3', '1', '1490545745');
+INSERT INTO `ot_apps` VALUES ('8', '8883', '2', '1803a951e001396862ae8e5e4bbd2f0fb0', '3fc9824711aaca2900dd6bffaa574e5f', '1', '1490545827');
+INSERT INTO `ot_apps` VALUES ('9', '啊实打实的', '2', '246c6809b5525f8439e0efa6f4feefa16b', '526f9fff1724727744392fe696adfb1c', '1', '1490545851');
+INSERT INTO `ot_apps` VALUES ('10', '啊实打实大222', '2', '46509064d8d4ad4a5ecba097df8a7e7096', '675a07780168c71c379f64f17f6bedf0', '1', '1490545859');
+INSERT INTO `ot_apps` VALUES ('11', '77777', '2', '675a8f7444a0a9aea2aa2e65d3867c49a6', '4fb4fb2eadb37a02f3d543bac5e24ba9', '1', '1490545878');
+INSERT INTO `ot_apps` VALUES ('12', '啊实打实的2', '2', '214c73e70b64fda372bd42c9dbe99ec3fb', 'bbba5fa5176bb9ed4049b371f4af8a94', '1', '1490546009');
 
 -- ----------------------------
 -- Table structure for ot_attachment
@@ -573,13 +601,14 @@ CREATE TABLE `ot_channel` (
   `target` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '新窗口打开',
   PRIMARY KEY (`id`),
   KEY `pid` (`pid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of ot_channel
 -- ----------------------------
 INSERT INTO `ot_channel` VALUES ('1', '0', '首页', 'Index/index', '1', '1379475111', '1379923177', '1', '0');
 INSERT INTO `ot_channel` VALUES ('2', '0', '博客', 'Article/index?category=blog', '2', '1379475131', '1379483713', '0', '0');
+INSERT INTO `ot_channel` VALUES ('4', '0', '控制台', 'Home/HomePage/appManage', '1', '1490548374', '1490548374', '1', '0');
 
 -- ----------------------------
 -- Table structure for ot_config
@@ -634,7 +663,7 @@ INSERT INTO `ot_config` VALUES ('34', 'DENY_VISIT', '3', '超管专限控制器�
 INSERT INTO `ot_config` VALUES ('35', 'REPLY_LIST_ROWS', '0', '回复列表每页条数', '2', '', '', '1386645376', '1387178083', '1', '10', '0');
 INSERT INTO `ot_config` VALUES ('36', 'ADMIN_ALLOW_IP', '2', '后台允许访问IP', '4', '', '多个用逗号分隔，如果不配置表示不限制IP访问', '1387165454', '1387165553', '1', '', '12');
 INSERT INTO `ot_config` VALUES ('37', 'SHOW_PAGE_TRACE', '4', '是否显示页面Trace', '4', '0:关闭\r\n1:开启', '是否显示页面Trace信息', '1387165685', '1387165685', '1', '0', '1');
-INSERT INTO `ot_config` VALUES ('38', 'APP_NEED_VERIFY', '4', '申请的第三方app是否需要审核', '4', '0:不需要审核\r\n1:需要审核', '', '1488700362', '1488700431', '1', '1', '0');
+INSERT INTO `ot_config` VALUES ('38', 'APP_NEED_VERIFY', '4', '申请的第三方app是否需要审核', '4', '0:不需要审核\r\n1:需要审核', '', '1488700362', '1490285356', '1', '0', '0');
 INSERT INTO `ot_config` VALUES ('39', 'HEAD_BANNER_TITLE', '1', '前台header的标题', '4', '', '', '1488707067', '1488709862', '1', 'SpiderRecorder', '0');
 
 -- ----------------------------
@@ -795,8 +824,8 @@ CREATE TABLE `ot_member` (
 -- ----------------------------
 -- Records of ot_member
 -- ----------------------------
-INSERT INTO `ot_member` VALUES ('1', 'root', '0', '0000-00-00', '', '20', '3', '0', '1488379498', '2130706433', '1488699312', '1');
-INSERT INTO `ot_member` VALUES ('2', 'xwh', '0', '0000-00-00', '', '20', '4', '2130706433', '1488381650', '2130706433', '1488707419', '1');
+INSERT INTO `ot_member` VALUES ('1', 'root', '0', '0000-00-00', '', '50', '7', '0', '1488379498', '2130706433', '1490548283', '1');
+INSERT INTO `ot_member` VALUES ('2', 'xwh', '0', '0000-00-00', '', '80', '14', '2130706433', '1488381650', '2130706433', '1494767546', '1');
 
 -- ----------------------------
 -- Table structure for ot_menu
@@ -989,6 +1018,55 @@ CREATE TABLE `ot_picture` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for ot_spider_record
+-- ----------------------------
+DROP TABLE IF EXISTS `ot_spider_record`;
+CREATE TABLE `ot_spider_record` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `app_id` int(11) DEFAULT NULL,
+  `spider_agent_id` int(11) DEFAULT NULL,
+  `spider_agent` varchar(500) DEFAULT NULL,
+  `access_url` varchar(500) DEFAULT NULL,
+  `add_year` int(5) DEFAULT NULL,
+  `add_month` int(5) DEFAULT NULL,
+  `add_day` int(5) DEFAULT NULL,
+  `add_hour` int(5) DEFAULT NULL,
+  `atime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ot_spider_record
+-- ----------------------------
+INSERT INTO `ot_spider_record` VALUES ('1', '3', '1', '856822545b7bbf2dbe683caa079049e149', 'wp.com/2017/04/16/hello-world/', '2017', '5', '15', '1', '1494782536');
+INSERT INTO `ot_spider_record` VALUES ('2', '3', '1', '856822545b7bbf2dbe683caa079049e149', 'wp.com/2017/04/16/hello-world/', '2017', '5', '15', '1', '1494782594');
+INSERT INTO `ot_spider_record` VALUES ('3', '3', '1', '856822545b7bbf2dbe683caa079049e149', 'wp.com/2017/04/16/hello-world/', '2017', '5', '15', '1', '1494782602');
+INSERT INTO `ot_spider_record` VALUES ('4', '3', '1', '856822545b7bbf2dbe683caa079049e149', 'wp.com/wp-admin/profile.php', '2017', '5', '15', '1', '1494782616');
+INSERT INTO `ot_spider_record` VALUES ('5', '3', '1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36', 'wp.com/wp-admin/profile.php', '2017', '5', '15', '1', '1494782676');
+INSERT INTO `ot_spider_record` VALUES ('6', '3', '1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36', 'wp.com/wp-admin/admin-ajax.php', '2017', '5', '15', '1', '1494782738');
+INSERT INTO `ot_spider_record` VALUES ('7', '3', '1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.96 Safari/537.36', 'wp.com/wp-admin/admin-ajax.php', '2017', '5', '15', '1', '1494782858');
+
+-- ----------------------------
+-- Table structure for ot_spiders
+-- ----------------------------
+DROP TABLE IF EXISTS `ot_spiders`;
+CREATE TABLE `ot_spiders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `spider_name` varchar(255) DEFAULT NULL,
+  `spider_agents` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of ot_spiders
+-- ----------------------------
+INSERT INTO `ot_spiders` VALUES ('1', 'google', 'www.google.com;www.googlebot.com');
+INSERT INTO `ot_spiders` VALUES ('2', 'baidu', 'baidu.com;www.baidu.com');
+INSERT INTO `ot_spiders` VALUES ('3', 'yahoo', 'misc.yahoo.com;help.yahoo.com');
+INSERT INTO `ot_spiders` VALUES ('4', 'sogou', 'sogou.com');
+INSERT INTO `ot_spiders` VALUES ('5', '360', '360.com');
+
+-- ----------------------------
 -- Table structure for ot_ucenter_admin
 -- ----------------------------
 DROP TABLE IF EXISTS `ot_ucenter_admin`;
@@ -1051,8 +1129,8 @@ CREATE TABLE `ot_ucenter_member` (
 -- ----------------------------
 -- Records of ot_ucenter_member
 -- ----------------------------
-INSERT INTO `ot_ucenter_member` VALUES ('1', 'root', '1863ddc164b10238b6fd57ba0daecec9', 'sh@1.com', '', '1488379498', '2130706433', '1488699312', '2130706433', '1488379498', '1');
-INSERT INTO `ot_ucenter_member` VALUES ('2', 'xwh', '1c9da3cb4d32d814d6f202f753e036e7', 'x@1.com', '', '1488381633', '2130706433', '1488707419', '2130706433', '1488381633', '1');
+INSERT INTO `ot_ucenter_member` VALUES ('1', 'root', '1863ddc164b10238b6fd57ba0daecec9', 'sh@1.com', '', '1488379498', '2130706433', '1490548283', '2130706433', '1488379498', '1');
+INSERT INTO `ot_ucenter_member` VALUES ('2', 'xwh', '1c9da3cb4d32d814d6f202f753e036e7', 'x@1.com', '', '1488381633', '2130706433', '1494767546', '2130706433', '1488381633', '1');
 
 -- ----------------------------
 -- Table structure for ot_ucenter_setting
