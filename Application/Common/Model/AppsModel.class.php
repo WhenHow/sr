@@ -36,6 +36,15 @@ class AppsModel extends Model
         parent::__construct();
     }
 
+    public function getId($app_id,$app_key){
+        $where['app_id'] = $app_id;
+        $where['app_key'] = $app_key;
+        $where['app_status'] = 1;
+        $ret = $this->where($where)->find();
+        return $ret ? $ret['id'] : false;
+
+    }
+
     public function addOne($data)
     {
         $check_data['app_name'] = trim($data['app_name']);
