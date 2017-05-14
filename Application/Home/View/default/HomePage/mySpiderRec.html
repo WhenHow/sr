@@ -4,7 +4,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">站点App</h1>
+                <h1 class="page-header">蜘蛛记录</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -13,15 +13,12 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        app列表
+                        记录列表
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div id="dataTables-example_wrapper"
                              class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                            <p>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">添加</button>
-                            </p>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <table width="100%"
@@ -33,28 +30,24 @@
                                             <th tabindex="0" aria-controls="dataTables-example"
                                                 rowspan="1" colspan="1" aria-sort="ascending"
                                                 aria-label="Rendering engine: activate to sort column descending"
-                                                style="width: 170px;">App名
+                                                style="width: 170px;">蜘蛛名
                                             </th>
                                             <th  tabindex="0" aria-controls="dataTables-example"
                                                 rowspan="1" colspan="1"
                                                 aria-label="Browser: activate to sort column ascending"
-                                                style="width: 206px;">app id
+                                                style="width: 206px;">蜘蛛信息
                                             </th>
                                             <th tabindex="0" aria-controls="dataTables-example"
                                                 rowspan="1" colspan="1"
                                                 aria-label="Platform(s): activate to sort column ascending"
-                                                style="width: 188px;">app key
+                                                style="width: 188px;">访问地址
                                             </th>
                                             <th tabindex="0" aria-controls="dataTables-example"
                                                 rowspan="1" colspan="1"
                                                 aria-label="Platform(s): activate to sort column ascending"
-                                                style="width: 188px;">状态
+                                                style="width: 188px;">访问时间
                                             </th>
-                                            <th tabindex="0" aria-controls="dataTables-example"
-                                                rowspan="1" colspan="1"
-                                                aria-label="Engine version: activate to sort column ascending"
-                                                style="width: 147px;">操作
-                                            </th>
+
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -62,14 +55,10 @@
                                         <volist name='data' id="vo">
                                             <php>$app_list_count++</php>
                                             <tr class="gradeA <if condition='($app_list_count % 2) eq 1 '>odd<else/>even</if>" role="row">
-                                                <td class="sorting_1">{$vo.app_name}</td>
-                                                <td>{$vo.app_id}</td>
-                                                <td>{$vo.app_key}</td>
-                                                <td><if condition="$vo['app_status'] eq 1 ">正常<else/>审核中</if></td>
-                                                <td class="center">
-                                                    <a href="{:U('Home/HomePage/getMySpiderRec',['app_id'=>$vo['id']])}"><button type="button" class="btn btn-primary btn-sm">查看蜘蛛记录</button></a>
-                                                    <button type="button" class="btn btn-primary btn-sm btn-danger">删除</button>
-                                                </td>
+                                                <td class="sorting_1">{$vo.spider_name}</td>
+                                                <td>{$vo.spider_agent}</td>
+                                                <td>{$vo.access_url}</td>
+                                                <td>{:date('Y-m-d H:i:s', $vo['atime'])}</td>
                                             </tr>
                                         </volist>
                                         </tbody>

@@ -10,6 +10,7 @@ namespace Home\Controller;
 
 
 use Home\Logic\AppsLogic;
+use Home\Logic\SpiderRecordLogic;
 
 class HomePageController extends HomeController
 {
@@ -50,7 +51,8 @@ class HomePageController extends HomeController
         $app_id = I('app_id');
         $page = intval(I('p'));
         $limit = intval(C('LIST_ROWS'));
-        $spider_agent_list = getAllSpiderList();
-        return $spider_agent_list;
+        $spider_record_data = (new SpiderRecordLogic())->getSpiderListByAppId($app_id,$page,$limit);
+        $this->assign($spider_record_data);
+        $this->display('mySpiderRec');
     }
 }

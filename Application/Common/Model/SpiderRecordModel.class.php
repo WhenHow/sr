@@ -10,6 +10,7 @@ namespace Common\Model;
 
 
 use Think\Model;
+use Think\Page;
 
 class SpiderRecordModel extends Model
 {
@@ -86,5 +87,18 @@ class SpiderRecordModel extends Model
             return true;
         }
         return false;
+    }
+
+
+    public function getSpiderListByAppId($app_id,$page,$limit){
+        $app_id = intval($app_id);
+        $condition['app_id'] = $app_id;
+
+        $data = $this->where($condition)->page($page)->limit($limit)->order('id desc')->select();
+        $count = $this->where($condition)->count();
+        $page_obj = new Page($count,$limit);
+
+        return ['data'=>$data,'page_obj'=>$page_obj->show(),'count'=>$count];
+
     }
 }
